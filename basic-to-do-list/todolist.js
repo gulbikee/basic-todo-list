@@ -50,4 +50,15 @@ function addTask(e){
 
 
 }
+function localStorageRecord(addNewTask){
+    let tasks;
+    if(localStorage.getItem('tasks')===null){
+        tasks=[];
+
+    }else{
+        tasks=JSON.parse(localStorage.getItem('tasks'));
+    }
+    tasks.push(addNewTask);
+
+}
 
